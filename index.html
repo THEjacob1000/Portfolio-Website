@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Jacob Sanderson Portfolio</title>
-        <link rel="stylesheet" href="./resources/style.css">
-    </head>
-    <body>
-        <header>
-            <img src="./resources/images/logo.png" id="logo" alt="logo">
-            <nav>
-                <ul>
-                    <li>About Me</li>
-                    <li>My Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </header>
-        <section id="hero">
-            <div class="overlay">
-              <h1>Jacob Sanderson</h1>
-              <p>Web Developer & Designer</p>
-              <a href="#about-me" class="cta-button">Learn More</a>
+
+<head>
+    <title>Jacob Sanderson Portfolio</title>
+    <link rel="stylesheet" href="./resources/style.css">
+    <script src="./resources/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./resources/images/logo.png" id="logo" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="#my-abilities">My Skills</a></li>
+                <li><a href=#about-me>About Me</a></li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="overlay">
+            <h1>Jacob Sanderson</h1>
+            <p>Web Developer & Designer</p>
+            <a href="#about-me" class="cta-button">Learn More</a>
+        </div>
+    </section>
+    <section id="my-abilities">
+        <h2>My Abilities</h2>
+        <div class="container">
+            <div class="ability-box">
+                <img src="./resources/images/programming.jpg" alt="Programming">
+                <h3>Programming</h3>
+                <p>
+                    Specializing in front-end development, I have a knack for creating intuitive and visually appealing
+                    user interfaces. Leveraging HTML, CSS, and JavaScript, I bring designs to life while ensuring
+                    optimal user experience.
+                    <a href="programming.html" class="learn-more inline-button">Learn More</a>
+                </p>
             </div>
-          </section>
-    </body>
+            <!-- Add more ability-box divs here in the future -->
+        </div>
+    </section>
+    <section id="about-me">
+        <div class="profile-container">
+            <div class="profile-photo-container">
+                <img src="./resources/images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>Hello! I'm a front-end developer with a passion for creating intuitive and visually appealing user
+                    experiences. With a strong foundation in HTML, CSS, and JavaScript, I'm always eager to take on new
+                    challenges and grow my skill set.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="contact">
+                <h4>Contact Me</h4>
+                <div class="contact-personal">
+                    <p><strong>Email:</strong> jacob.s.sanderson@gmail.com</p>
+                    <p><strong>Phone:</strong> 0456 618 265</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <h4>Follow Me</h4>
+                <!-- Insert social media icons here -->
+            </div>
+            <div class="copyright">
+                <p>© 2023 by Jacob Sanderson. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
 </html>
