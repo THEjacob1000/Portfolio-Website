@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Me - Jacob Sanderson</title>
+    <link rel="stylesheet" href="./resources/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./resources/images/logo.png" id="logo" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-content">
+        <div class="contact-form-container">
+            <h1>Contact Me</h1>
+            <form action="send_email.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <footer id="contact-footer">
+        <div class="footer-container">
+            <div class="contact">
+                <h4>Contact Me</h4>
+                <div class="contact-personal">
+                    <p><strong>Email:</strong> jacob.s.sanderson@gmail.com</p>
+                    <p><strong>Phone:</strong> 0456 618 265</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <h4>Follow Me</h4>
+                <!-- Insert social media icons here -->
+            </div>
+            <div class="copyright">
+                <p>© 2023 by Jacob Sanderson. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
