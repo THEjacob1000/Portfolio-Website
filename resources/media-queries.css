@@ -1,0 +1,236 @@
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=
+---------index.html----------
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+
+
+/* ========================== /
+     Small Screen Styling
+/ ========================== */
+
+@media only screen and (max-width: 480px) {
+    /* Header */
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #FFFFFF;
+      width: 100%;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Hero */
+    .overlay {
+      max-width: 90%;
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  
+    /* My Abilities */
+    .ability-box {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  
+    /* About Me */
+    .profile-container {
+      flex-direction: column;
+    }
+    .profile-photo-container,
+    .about-text {
+      max-width: 100%;
+    }
+  
+    /* Footer */
+    .footer-container {
+      flex-direction: column;
+    }
+}
+
+  
+/* ========================== /
+     Tablet Screen Styling
+/ ========================== */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+    }
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Hero */
+    .overlay {
+        max-width: 80%;
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* My Abilities */
+    .ability-box {
+        min-width: calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+
+    /* About Me */
+    .profile-container {
+        flex-direction: column;
+        align-items: center; /* Center the content */
+    }
+    .profile-photo-container,
+    .about-text {
+        max-width: 100%;
+        text-align: center; /* Center the text */
+    }
+    .about-text p {
+        margin: 1rem auto; /* Add some margin around the paragraph */
+        font-size: calc(0.8rem + 0.3vw); /* Adjust font size */
+        line-height: 1.4; /* Adjust line height */
+        overflow-y: visible; /* Make sure text is visible */
+    }
+}
+
+/* ========================== /
+     Medium Screen Styling
+/ ========================== */
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    /* Header */
+    header {
+        padding: 1rem 1.5rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+    nav ul li {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .overlay {
+        max-width: 70%;
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* My Abilities */
+    .ability-box {
+        min-width: calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+
+    /* About Me */
+    .profile-container {
+        flex-direction: row;
+    }
+    .profile-photo-container {
+        max-width: calc(40% - 1rem); /* Reduced width */
+        margin-left: 2rem; /* Added left margin */
+    }
+    .profile-photo {
+        width: 90%; /* Reduced size */
+        margin-left: 5%; /* Centered the image */
+    }
+    .about-text {
+        max-width: calc(60% - 1rem);
+        border-left: 4px solid #333333;
+        padding-left: 1rem; /* Added padding to separate from the bar */
+    }
+    .about-text h3,
+    .about-text p {
+        font-size: calc(1rem + 0.3vw);
+    }
+}
+
+
+/* *=*=*=*=*=*=*=*=*=*=*=*=*=
+---------contact.html----------
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+
+/* ========================== /
+      Small Screen Styling
+/ ========================== */
+
+@media only screen and (max-width: 480px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Contact Form */
+    .contact-form-container {
+        max-width: 90%;
+        padding: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+    }
+}
+
+/* ========================== /
+     Tablet Screen Styling
+/ ========================== */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Contact Form */
+    .contact-form-container {
+        max-width: 80%;
+        padding: 15px;
+    }
+}
+
+/* ========================== /
+     Medium Screen Styling
+/ ========================== */
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    /* Contact Form */
+    .contact-form-container {
+        max-width: 70%;
+        padding: 20px;
+    }
+}

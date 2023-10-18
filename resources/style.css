@@ -32,6 +32,7 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 header img {
@@ -77,6 +78,20 @@ nav ul li::before {
 nav ul li:hover::before {
     visibility: visible;
     width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 24px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #4D4D4D;
+    height: 3px;
+    width: 25px;
 }
 
 /* ========================== /
@@ -448,12 +463,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 100px);  /* Adjust based on the height of your header and footer */
+    min-height: calc(100vh - 100px);
+    /* Adjust based on the height of your header and footer */
 }
 
 /* Updated form container */
 .contact-form-container {
-    max-width: 80%;  /* Adjust this to take up more horizontal space */
+    max-width: 80%;
+    /* Adjust this to take up more horizontal space */
     min-width: 30%;
     margin: auto;
     padding: 20px;
@@ -484,7 +501,8 @@ textarea {
 
 /* Updated submit button color */
 input[type="submit"] {
-    background-color: #4D4D4D;  /* Change to a color that matches your scheme */
+    background-color: #4D4D4D;
+    /* Change to a color that matches your scheme */
     color: white;
     padding: 14px 20px;
     border: none;

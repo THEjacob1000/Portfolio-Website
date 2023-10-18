@@ -17,30 +17,34 @@ window.addEventListener("scroll", function() {
 window.addEventListener('resize', adjustFontSize);
 document.addEventListener('DOMContentLoaded', adjustFontSize);
 
+// Function to adjust the font size
 function adjustFontSize() {
   const container = document.querySelector('.about-text');
-  const paragraph = container.querySelector('p');
-  
-  let fontSize = 16; // Start with a base font size in pixels
-  let maxHeight = container.clientHeight - 40; // Account for some padding and other text
-  let textHeight;
+  if (!container) return;
+  const textElement = container.querySelector('p');
+  let fontSize = parseInt(window.getComputedStyle(textElement, null).getPropertyValue('font-size'));
 
-  // Reset to base size to measure
-  paragraph.style.fontSize = `${fontSize}px`;
-  textHeight = paragraph.clientHeight;
+  // Reset overflow to initial state
+  container.style.overflowY = 'visible';
 
-  // Increase font size if there's extra space
-  while (textHeight < maxHeight && fontSize < 40) {
-    fontSize += 0.5;
-    paragraph.style.fontSize = `${fontSize}px`;
-    textHeight = paragraph.clientHeight;
-  }
-
-  // Decrease font size if text overflows
-  while (textHeight > maxHeight && fontSize > 10) {
-    fontSize -= 0.5;
-    paragraph.style.fontSize = `${fontSize}px`;
-    textHeight = paragraph.clientHeight;
+  // Check if the text overflows the container
+  while (container.scrollHeight > container.clientHeight) {
+    fontSize--; // Reduce the font size by 1
+    textElement.style.fontSize = fontSize + 'px'; // Apply the new font size
   }
 }
 
+// Call the function initially
+adjustFontSize();
+
+// Call the function whenever the window is resized
+window.addEventListener('resize', adjustFontSize);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const mobileMenuButton = document.getElementById("mobile-menu");
+  const navList = document.querySelector("nav ul");
+
+  mobileMenuButton.addEventListener("click", function() {
+    navList.classList.toggle("active");
+  });
+});
